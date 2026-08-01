@@ -1,0 +1,21 @@
+Zecpath AI
+Resume Skill Extraction Accuracy Report
+
+----------------------------------------
+
+Total Resume Samples Tested : 3
+
+Skills Successfully Detected : 17
+
+Missed Skills : 0
+
+False Positives : 0
+
+Technology Stack Detection : Successful
+
+Synonym Detection : Successful
+
+Overall Accuracy : 100%
+
+Date:
+01-Aug-2026

@@ -1,0 +1,13 @@
+Name: Sarah
+
+Skills:
+React
+JavaScript
+HTML
+CSS
+
+Experience:
+Frontend Developer
+
+Projects:
+Portfolio Website

@@ -1,0 +1,13 @@
+Name: Alex
+
+Skills:
+TensorFlow
+PyTorch
+Machine Learning
+NLP
+
+Experience:
+AI Engineer
+
+Projects:
+Chatbot using Natural Language Processing

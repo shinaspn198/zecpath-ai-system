@@ -1,0 +1,13 @@
+Name: John Doe
+
+Skills:
+Python
+FastAPI
+Docker
+SQL
+
+Experience:
+Backend Developer
+
+Projects:
+AI Resume Parser using Machine Learning
