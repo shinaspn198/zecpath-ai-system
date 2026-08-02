@@ -1,0 +1,17 @@
+John Doe
+
+WORK EXPERIENCE
+
+Software Engineer
+ABC Technologies
+
+January 2022 - March 2024
+
+Developed REST APIs using FastAPI and Python.
+
+Python Developer
+XYZ Solutions
+
+June 2020 - December 2021
+
+Worked on automation and machine learning projects.
