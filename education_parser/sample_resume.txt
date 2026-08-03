@@ -1,0 +1,23 @@
+John Doe
+
+EDUCATION
+
+Bachelor of Computer Applications (BCA)
+University of Calicut
+Artificial Intelligence
+2025
+
+Master of Computer Applications (MCA)
+APJ Abdul Kalam Technological University
+Data Science
+2027
+
+CERTIFICATIONS
+
+Python for Data Science – Coursera
+
+Machine Learning Specialization – Stanford University
+
+AWS Certified Cloud Practitioner
+
+Google Data Analytics Professional Certificate
