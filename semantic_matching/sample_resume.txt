@@ -1,0 +1,12 @@
+Software Engineer
+
+Skills:
+Python
+FastAPI
+Machine Learning
+TensorFlow
+Docker
+
+Experience:
+Built AI-powered recruitment systems using Python and Machine Learning.
+Developed REST APIs with FastAPI.

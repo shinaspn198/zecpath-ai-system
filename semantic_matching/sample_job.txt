@@ -1,0 +1,12 @@
+AI Engineer
+
+Required Skills:
+Python
+Machine Learning
+FastAPI
+Docker
+
+Responsibilities:
+Develop AI recruitment systems.
+Build scalable APIs using FastAPI.
+Work on Machine Learning projects.
