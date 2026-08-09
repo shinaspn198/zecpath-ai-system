@@ -1,47 +1,91 @@
 import json
+from pathlib import Path
 
-# Load weights
-with open("config/weights.json", "r") as file:
-    weights = json.load(file)
 
-# Select the role
-role = "AI Engineer"
-role_weights = weights[role]
+# Load ATS role weights
+BASE_DIR = Path(__file__).resolve().parent
+WEIGHTS_FILE = BASE_DIR / "config" / "weights.json"
 
-# Candidate scores
-candidate = {
-    "skill_match": 90,
-    "experience_relevance": None,   # Try changing this to 80 later
-    "education_alignment": 100,
-    "semantic_similarity": 85
-}
+with open(WEIGHTS_FILE, "r") as file:
+    WEIGHTS = json.load(file)
 
-# Handle missing values
-for key, value in candidate.items():
-    if value is None:
-        candidate[key] = 0
 
-# Calculate contribution of each parameter
-skill_score = candidate["skill_match"] * role_weights["skill_match"] / 100
-experience_score = candidate["experience_relevance"] * role_weights["experience_relevance"] / 100
-education_score = candidate["education_alignment"] * role_weights["education_alignment"] / 100
-semantic_score = candidate["semantic_similarity"] * role_weights["semantic_similarity"] / 100
+def calculate_ats_score(
+    role,
+    skill_match,
+    experience_relevance,
+    education_alignment,
+    semantic_similarity
+):
+    """
+    Calculate the weighted ATS score for a candidate.
+    """
 
-# Final ATS Score
-ats_score = (
-    skill_score +
-    experience_score +
-    education_score +
-    semantic_score
-)
+    if role not in WEIGHTS:
+        raise ValueError(f"Unsupported role: {role}")
 
-print("========== ATS SCORE REPORT ==========")
-print(f"Role: {role}\n")
+    candidate = {
+        "skill_match": skill_match,
+        "experience_relevance": experience_relevance,
+        "education_alignment": education_alignment,
+        "semantic_similarity": semantic_similarity
+    }
 
-print(f"Skill Match           : {candidate['skill_match']}%  -> {skill_score:.2f} points")
-print(f"Experience Relevance  : {candidate['experience_relevance']}%  -> {experience_score:.2f} points")
-print(f"Education Alignment   : {candidate['education_alignment']}%  -> {education_score:.2f} points")
-print(f"Semantic Similarity   : {candidate['semantic_similarity']}%  -> {semantic_score:.2f} points")
+    # Handle missing values
+    for key, value in candidate.items():
+        if value is None:
+            candidate[key] = 0
 
-print("--------------------------------------")
-print(f"Final ATS Score: {ats_score:.2f}%")
+        if not 0 <= candidate[key] <= 100:
+            raise ValueError(f"{key} must be between 0 and 100")
+
+    role_weights = WEIGHTS[role]
+
+    skill_score = (
+        candidate["skill_match"]
+        * role_weights["skill_match"]
+        / 100
+    )
+
+    experience_score = (
+        candidate["experience_relevance"]
+        * role_weights["experience_relevance"]
+        / 100
+    )
+
+    education_score = (
+        candidate["education_alignment"]
+        * role_weights["education_alignment"]
+        / 100
+    )
+
+    semantic_score = (
+        candidate["semantic_similarity"]
+        * role_weights["semantic_similarity"]
+        / 100
+    )
+
+    ats_score = (
+        skill_score
+        + experience_score
+        + education_score
+        + semantic_score
+    )
+
+    return round(ats_score, 2)
+
+
+if __name__ == "__main__":
+
+    # Test candidate
+    score = calculate_ats_score(
+        role="AI Engineer",
+        skill_match=69.98,
+        experience_relevance=69.98,
+        education_alignment=69.98,
+        semantic_similarity=70.02
+    )
+
+    print("========== ATS SCORE REPORT ==========")
+    print("Role: AI Engineer")
+    print(f"Final ATS Score: {score:.2f}%")

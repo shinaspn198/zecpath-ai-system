@@ -21,6 +21,11 @@ class ResumeParseResponse(BaseModel):
 
 class ScoringRequest(BaseModel):
     candidate_id: str
+    role: str = "AI Engineer"
+    skill_match: float
+    experience_relevance: float
+    education_alignment: float
+    semantic_similarity: float
 
 
 class ScoringResponse(BaseModel):

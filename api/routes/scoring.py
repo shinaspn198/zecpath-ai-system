@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
 from api.schemas import ScoringRequest, ScoringResponse
+from ats_score import calculate_ats_score
 
 
 router = APIRouter(
@@ -18,7 +19,20 @@ async def calculate_score(request: ScoringRequest):
             detail="Candidate ID is required"
         )
 
-    ats_score = 0
+    try:
+        ats_score = calculate_ats_score(
+            role=request.role,
+            skill_match=request.skill_match,
+            experience_relevance=request.experience_relevance,
+            education_alignment=request.education_alignment,
+            semantic_similarity=request.semantic_similarity
+        )
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
 
     return ScoringResponse(
         candidate_id=request.candidate_id,
