@@ -14,12 +14,13 @@ SECTION_RULES = {
         "competencies"
     ],
 
-    "experience": [
-        "experience",
-        "work experience",
-        "professional experience",
-        "employment history"
-    ],
+   "experience": [
+    "experience",
+    "work experience",
+    "professional experience",
+    "employment history",
+    "internship experience"
+],
 
     "education": [
         "education",
