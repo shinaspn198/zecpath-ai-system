@@ -25,11 +25,12 @@ for rank, candidate in enumerate(ranked_candidates, start=1):
 
     score = candidate["score"]
 
-    if score >= 85:
+    # Use the same thresholds as the Shortlisting API
+    if score >= 70:
         status = "Shortlisted"
         shortlisted.append(candidate["name"])
 
-    elif score >= 70:
+    elif score >= 50:
         status = "Review"
         review.append(candidate["name"])
 
