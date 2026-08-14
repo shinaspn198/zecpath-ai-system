@@ -1,0 +1,23 @@
+{
+  "AI Engineer": {
+    "minimum_ats_score": 70,
+    "mandatory_skills": [
+      "Python",
+      "Machine Learning",
+      "FastAPI"
+    ],
+    "experience": {
+      "min_years": 0,
+      "max_years": 3
+    },
+    "location": [
+      "Remote",
+      "Bangalore"
+    ],
+    "availability": [
+      "Immediate",
+      "15 days",
+      "30 days"
+    ]
+  }
+}
