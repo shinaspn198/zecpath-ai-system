@@ -1,0 +1,32 @@
+{
+  "screening_categories": {
+    "introduction": {
+      "purpose": "Understand the candidate's background and interest in the role",
+      "priority": "high"
+    },
+    "education": {
+      "purpose": "Verify educational qualifications and certifications",
+      "priority": "medium"
+    },
+    "experience": {
+      "purpose": "Evaluate professional experience and previous responsibilities",
+      "priority": "high"
+    },
+    "skills": {
+      "purpose": "Identify technical skills, tools, technologies, and relevant projects",
+      "priority": "high"
+    },
+    "location": {
+      "purpose": "Check candidate location and relocation or work-mode compatibility",
+      "priority": "medium"
+    },
+    "salary": {
+      "purpose": "Understand compensation expectations and alignment",
+      "priority": "medium"
+    },
+    "notice_period": {
+      "purpose": "Determine candidate availability and potential joining date",
+      "priority": "high"
+    }
+  }
+}

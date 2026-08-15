@@ -1,0 +1,254 @@
+{
+  "dataset_name": "Zecpath HR Screening Question Bank",
+  "version": "1.0",
+  "description": "AI-ready HR screening questions for automated candidate screening calls",
+  "language": "en",
+  "questions": [
+    {
+      "question_id": "HR-001",
+      "category": "introduction",
+      "question": "Tell me about yourself.",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-002",
+      "category": "introduction",
+      "question": "Can you briefly describe your professional background?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-003",
+      "category": "introduction",
+      "question": "What interests you about this position?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-004",
+      "category": "introduction",
+      "question": "What are your main career goals?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+
+    {
+      "question_id": "HR-005",
+      "category": "education",
+      "question": "What is your highest educational qualification?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-006",
+      "category": "education",
+      "question": "What did you study and where did you complete your education?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-007",
+      "category": "education",
+      "question": "What was your area of specialization?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-008",
+      "category": "education",
+      "question": "Do you have any relevant certifications?",
+      "expected_answer_type": "list",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+
+    {
+      "question_id": "HR-009",
+      "category": "experience",
+      "question": "How many years of professional experience do you have?",
+      "expected_answer_type": "number",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-010",
+      "category": "experience",
+      "question": "What is your current or most recent job role?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-011",
+      "category": "experience",
+      "question": "Can you describe your previous work experience?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-012",
+      "category": "experience",
+      "question": "What were your main responsibilities in your previous role?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-013",
+      "category": "experience",
+      "question": "What was your reason for leaving your previous position?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+
+    {
+      "question_id": "HR-014",
+      "category": "skills",
+      "question": "What are your primary technical skills?",
+      "expected_answer_type": "list",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-015",
+      "category": "skills",
+      "question": "Which programming languages are you comfortable working with?",
+      "expected_answer_type": "list",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-016",
+      "category": "skills",
+      "question": "Which tools or technologies do you use regularly?",
+      "expected_answer_type": "list",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-017",
+      "category": "skills",
+      "question": "Can you describe a technical project you have worked on?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-018",
+      "category": "skills",
+      "question": "How do you keep your technical skills up to date?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-019",
+      "category": "skills",
+      "question": "Which skill would you like to improve further?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "low"
+    },
+
+    {
+      "question_id": "HR-020",
+      "category": "location",
+      "question": "Where are you currently located?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-021",
+      "category": "location",
+      "question": "Are you willing to relocate if required?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-022",
+      "category": "location",
+      "question": "Are you comfortable working remotely or from the office?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+
+    {
+      "question_id": "HR-023",
+      "category": "salary",
+      "question": "What is your current salary or compensation?",
+      "expected_answer_type": "number",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-024",
+      "category": "salary",
+      "question": "What are your salary expectations for this position?",
+      "expected_answer_type": "number",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-025",
+      "category": "salary",
+      "question": "Are your salary expectations negotiable?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": "low"
+    },
+    {
+      "question_id": "HR-026",
+      "category": "salary",
+      "question": "Are you comfortable with the compensation range offered for this role?",
+      "expected_answer_type": "boolean",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+
+    {
+      "question_id": "HR-027",
+      "category": "notice_period",
+      "question": "What is your current notice period?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-028",
+      "category": "notice_period",
+      "question": "When would you be available to start?",
+      "expected_answer_type": "date_or_text",
+      "mandatory": true,
+      "scoring_importance": "high"
+    },
+    {
+      "question_id": "HR-029",
+      "category": "notice_period",
+      "question": "Can your notice period be reduced if required?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    },
+    {
+      "question_id": "HR-030",
+      "category": "notice_period",
+      "question": "Are you available for an immediate joining?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": "medium"
+    }
+  ]
+}
