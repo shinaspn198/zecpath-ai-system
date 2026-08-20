@@ -1,20 +1,33 @@
 import re
 
 
-def normalize_transcript(text: str) -> str:
+def normalize_transcript(text):
     text = text.strip()
 
-    # Remove common filler words
-    filler_words = r"\b(um|uh|uhh|hmm|erm)\b"
-    text = re.sub(filler_words, "", text, flags=re.IGNORECASE)
+    filler_words = [
+        "uh",
+        "uhh",
+        "um",
+        "umm",
+        "er",
+        "err"
+    ]
 
-    # Remove leftover dots from filler expressions
-    text = re.sub(r"\.{2,}", "", text)
+    for word in filler_words:
+        text = re.sub(rf"\b{word}\b", "", text, flags=re.IGNORECASE)
 
-    # Remove repeated spaces
-    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+
+    # Remove dots/punctuation left at the beginning
+    text = re.sub(r"^[.,!?]+\s*", "", text)
 
     # Remove spaces before punctuation
     text = re.sub(r"\s+([,.!?])", r"\1", text)
 
-    return text.strip()
+    # Remove repeated punctuation
+    text = re.sub(r"\.{2,}", ".", text)
+
+    if text:
+        text = text[0].upper() + text[1:]
+
+    return text
